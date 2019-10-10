@@ -1,36 +1,56 @@
 <template>
   <div>
-    <header>
-      <div class="activity-head">
-        <div class="wrapper">
+    <!--引用组件-->
+    <div class="activity-head">
+      <div class="wrapper">
+        <!--头部导航-->
+        <header>
           <div class="sui-navbar">
             <div class="navbar-inner">
               <a href="index-logined.html" class="sui-brand">
                 <img src="~/assets/img/asset-logo-black.png" alt="社交" />
               </a>
               <ul class="sui-nav">
-                <li class="active">
-                  <a href="~/assets/headline-logined.html">头条</a>
+                <!-- <li class="active">
+                  <a href="/">头条</a>
                 </li>
                 <li>
-                  <a href="~/assets/qa-logined.html">问答</a>
+                  <a href="/qa">问答</a>
                 </li>
                 <li>
-                  <a href="~/assets/activity-index.html">活动</a>
+                  <a href="/gathering">活动</a>
                 </li>
                 <li>
-                  <a href="~/assets/makeFriends-index.html">交友</a>
+                  <a href="/friend">交友</a>
                 </li>
                 <li>
-                  <a href="~/assets/spit-index.html">吐槽</a>
+                  <a href="/spit">吐槽</a>
                 </li>
                 <li>
-                  <a href="~/assets/recruit-index.html">招聘</a>
-                </li>
+                  <a href="/recruit">招聘</a>
+                </li>-->
+                <router-link tag="li" to="/" active-class="active" exact>
+                  <a>头条</a>
+                </router-link>
+                <router-link tag="li" to="/qa" active-class="active">
+                  <a>问答</a>
+                </router-link>
+                <router-link tag="li" to="/gathering" active-class="active">
+                  <a>活动</a>
+                </router-link>
+                <router-link tag="li" to="/friend" active-class="active">
+                  <a>交友</a>
+                </router-link>
+                <router-link tag="li" to="/spit" active-class="active">
+                  <a>吐槽</a>
+                </router-link>
+                <router-link tag="li" to="/recruit" active-class="active">
+                  <a>招聘</a>
+                </router-link>
               </ul>
               <form class="sui-form sui-form pull-left">
                 <input type="text" placeholder="输入关键词..." />
-                <span class="btn-search fa fa-search"></span>
+                <!-- <span class="btn-search fa fa-search"></span> -->
               </form>
               <div class="sui-nav pull-right info">
                 <li>
@@ -44,9 +64,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </header>
       </div>
-    </header>
+    </div>
     <nuxt />
     <footer>
       <div class="footer">
